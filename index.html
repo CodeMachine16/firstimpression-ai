@@ -1,100 +1,204 @@
-file:///home/oai/share/firstimpression-site/index.html
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<title>FirstImpression AI</title>
-<style>
-body {font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.4;}
-header {background:#f5f5f5; padding:20px; position:sticky; top:0;}
-nav a {margin-right:15px; color:#333; text-decoration:none;}
-section {padding:30px;}
-.card {border:1px solid #e5e7eb; border-radius:10px; padding:20px; margin-bottom:20px;}
-.price {font-size:24px; font-weight:bold;}
-button, .btn {padding:10px 20px; background:#1976d2; color:white; border:none; border-radius:5px; cursor:pointer; text-decoration:none; display:inline-block;}
-button:hover, .btn:hover {background:#0d47a1;}
-footer {background:#fafafa; padding:20px; text-align:center;}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FirstImpression AI | Resume & Career Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Basic reset and typography */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; background-color: #f9fafb; color: #1f2937; }
+    a { color: inherit; text-decoration: none; }
+    .container { width: 90%; max-width: 1100px; margin: 0 auto; padding: 40px 0; }
+    header { background: #4f46e5; color: #fff; padding: 20px 0; }
+    nav ul { list-style: none; display: flex; justify-content: center; gap: 30px; }
+    nav a { font-weight: 600; }
+    nav a:hover { text-decoration: underline; }
+    .hero { text-align: center; padding: 80px 0; background: #f3f4f6; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 20px; font-weight: 700; color: #4f46e5; }
+    .hero p { font-size: 1.1rem; max-width: 600px; margin: 0 auto 30px; color: #374151; }
+    .hero .cta { display: inline-block; background: #4f46e5; color: #fff; padding: 12px 28px; border-radius: 6px; font-weight: 600; }
+    .hero .cta:hover { background: #4338ca; }
+
+    /* Sections */
+    section { padding: 60px 0; }
+    section h2 { text-align: center; font-size: 2rem; margin-bottom: 40px; color: #4f46e5; }
+
+    /* What You Get */
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+    .feature { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .feature h3 { font-size: 1.25rem; margin-bottom: 15px; color: #1f2937; }
+    .feature p { font-size: 0.95rem; color: #4b5563; }
+
+    /* Pricing */
+    .pricing-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+    .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); padding: 30px; display: flex; flex-direction: column; justify-content: space-between; }
+    .card h3 { font-size: 1.5rem; margin-bottom: 10px; color: #4f46e5; }
+    .price { font-size: 1.5rem; font-weight: 700; margin-bottom: 20px; }
+    .card ul { list-style: none; margin-bottom: 20px; }
+    .card li { margin-bottom: 10px; font-size: 0.95rem; color: #4b5563; }
+    .card .btn { background: #4f46e5; color: #fff; padding: 10px 0; border-radius: 6px; text-align: center; font-weight: 600; }
+    .card .btn:hover { background: #4338ca; }
+
+    /* Upcoming AI */
+    .upcoming { background: #f3f4f6; text-align: center; padding: 60px 20px; }
+    .upcoming p { max-width: 700px; margin: 0 auto 20px; color: #4b5563; font-size: 1rem; }
+    .upcoming h3 { color: #4f46e5; font-size: 1.5rem; margin-bottom: 10px; }
+
+    /* About & Projects */
+    .about, .projects { background: #fff; padding: 60px 20px; }
+    .about h3, .projects h3 { font-size: 1.5rem; margin-bottom: 15px; color: #1f2937; }
+    .about p, .projects ul li { font-size: 0.95rem; color: #4b5563; }
+    .projects ul { list-style: disc; padding-left: 20px; }
+
+    /* Contact */
+    .contact { text-align: center; background: #f3f4f6; padding: 60px 20px; }
+    .contact p { font-size: 1rem; color: #4b5563; margin-bottom: 10px; }
+    .contact a { color: #4f46e5; font-weight: 600; }
+
+    footer { background: #1f2937; color: #fff; text-align: center; padding: 20px 0; font-size: 0.85rem; }
+  </style>
 </head>
 <body>
-<header><nav>
-<a href='#about'>About</a>
-<a href='#what'>What You'll Get</a>
-<a href='#pricing'>Pricing</a>
-<a href='#contact'>Contact</a>
-</nav></header>
-<main>
-<section id='what'>
-<h2>What You'll Get</h2>
-<p>Personalized resume guidance, bullet point crafting, formatting tips, and more.</p>
-</section>
-<section id='pricing'>
-<h2>Pricing & Packages</h2>
-<div class='card'>
-<h3>Starter</h3>
-<p class='price'>$25</p>
-<ul>
-<li>Resume look over and suggestions.</li>
-<li>30-minute consultation; editing & adding to resume.</li>
-<li>Editing and adding to resume (continued support).</li>
-<li>New resume start.</li>
-</ul>
-<a class='btn' href='#contact'>Get Starter</a>
-</div>
-<div class='card'>
-<h3>Pro</h3>
-<p class='price'>$45</p>
-<ul>
-<li>Two 30-minute consultations.</li>
-<li>LinkedIn checkup/remodelling.</li>
-<li>Limited access to AI resume & LinkedIn tools (future).</li>
-<li>1 future free resume update.</li>
-<li>New resume start.</li>
-</ul>
-<a class='btn' href='#contact'>Upgrade to Pro</a>
-</div>
-<div class='card'>
-<h3>Launch</h3>
-<p class='price'>$55</p>
-<ul>
-<li>Two 1-hour consultations.</li>
-<li>Extended access to AI tools (future).</li>
-<li>Extended access to future services.</li>
-<li>2 future free resume updates.</li>
-<li>College essay ideas and essay look over.</li>
-<li>Non-profit/project checkup.</li>
-</ul>
-<a class='btn' href='#contact'>Go Launch</a>
-</div>
-<p>AI tools are in development and available to Pro & Launch clients when released.</p>
-</section>
-<section id='about'>
-<h2>About Akshat Vashishtha</h2>
-<p>Akshat, a student from Cary, North Carolina, founded FirstImpression AI to help peers craft strong resumes. He leads cybersecurity initiatives and community projects.</p>
-</section>
-<section id='leadership'>
-<h2>Leadership & Projects</h2>
-<ul>
-<li>TYE Oazis Armband – wearable device enhancing safety.</li>
-<li>Cybersecurity & Youth Advocacy – CSA working groups involvement.</li>
-<li>Community Service – 100+ volunteer hours.</li>
-</ul>
-</section>
-<section id='ai'>
-<h2>Upcoming AI Resume & Career Assistant</h2>
-<p>We're building an AI assistant to refine resumes and career plans. Available to Pro & Launch clients when ready.</p>
-</section>
-<section id='contact'>
-<h2>Contact & Payment Options</h2>
-<ul>
-<li>Email: <a href='mailto:akshatvash@gmail.com'>akshatvash@gmail.com</a></li>
-<li>Phone: <a href='tel:+16897770976'>(689) 777-0976</a></li>
-<li>Payment: Bank transfer, Cash App, Zelle or your preferred method.</li>
-</ul>
-</section>
-</main>
-<footer>&copy; <span id='year'></span> FirstImpression AI</footer>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <header>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#what">What You’ll Get</a></li>
+          <li><a href="#pricing">Pricing & Packages</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Unlock Your First Impression</h1>
+      <p>Resume & career services designed for high school and early college students—helping you present the best version of yourself.</p>
+      <a href="#pricing" class="cta">Explore Plans</a>
+    </div>
+  </section>
+
+  <section id="what">
+    <div class="container">
+      <h2>What You’ll Get</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Personalized Resume Guidance</h3>
+          <p>Expert suggestions to refine your resume: structure, wording, and positioning to catch a recruiter&#39;s eye.</p>
+        </div>
+        <div class="feature">
+          <h3>Consultations & Feedback</h3>
+          <p>One‑on‑one sessions to discuss your goals, answer questions, and provide actionable feedback.</p>
+        </div>
+        <div class="feature">
+          <h3>Career & College Prep</h3>
+          <p>Support for applications, internship search strategies, essay brainstorming, and interview prep.</p>
+        </div>
+        <div class="feature">
+          <h3>Future AI Tools</h3>
+          <p>Access to our upcoming AI resume and career assistant (future): smart resume scoring, keyword matching, and optimized LinkedIn advice.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pricing">
+    <div class="container">
+      <h2>Pricing & Packages</h2>
+      <div class="pricing-cards">
+        <!-- Starter -->
+        <div class="card">
+          <h3>Starter</h3>
+          <div class="price">$25</div>
+          <ul>
+            <li>Resume look over and suggestions</li>
+            <li>30‑minute consultation – editing and adding to resume</li>
+            <li>Personalized resume and career guidance</li>
+            <li>New resume start</li>
+          </ul>
+          <a href="#contact" class="btn">Get Starter</a>
+        </div>
+        <!-- Pro -->
+        <div class="card">
+          <h3>Pro</h3>
+          <div class="price">$45</div>
+          <ul>
+            <li>Everything in Starter</li>
+            <li>Two 30‑minute consultations (two meetings)</li>
+            <li>Resume keyword map tailored to your goals</li>
+            <li>LinkedIn checkup/remodelling (future)</li>
+            <li>Limited access to our AI tool (future)</li>
+            <li>1 future free resume update</li>
+            <li>New resume start</li>
+          </ul>
+          <a href="#contact" class="btn">Upgrade to Pro</a>
+        </div>
+        <!-- Launch -->
+        <div class="card">
+          <h3>Launch</h3>
+          <div class="price">$55</div>
+          <ul>
+            <li>Everything in Pro</li>
+            <li>Two 1‑hour consultations (two meetings)</li>
+            <li>College application essay topic ideas and essay look over</li>
+            <li>Non‑profit or project checkup & advice</li>
+            <li>Extended access to future services</li>
+            <li>2 future free resume updates</li>
+          </ul>
+          <a href="#contact" class="btn">Go Launch</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="upcoming">
+    <div class="container">
+      <h3>Upcoming AI Resume & Career Assistant</h3>
+      <p>We’re building an AI‑powered assistant that will analyse your resume, suggest improvements based on industry best practices, and help you with LinkedIn optimization. This tool is still in development and will be available to customers who choose our Pro and Launch plans (future).</p>
+    </div>
+  </section>
+
+    <section id="about" class="about">
+    <div class="container">
+      <h2>About Akshat Vashishtha</h2>
+      <p>Hi! I’m Akshat Vashishtha, the founder of FirstImpression AI. With experience spanning cybersecurity research, leadership roles, and business strategy, I help young professionals craft compelling stories. My mission is to help students showcase their achievements with confidence.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2>Leadership & Projects</h2>
+      <ul>
+        <li>Founded and led the TYE team behind Oazis armband, winning the global TiE Young Entrepreneurs pitch competition.</li>
+        <li>Actively involved in the CSA working groups, focusing on global security standards.</li>
+        <li>Engage in community projects through Rotary International and school clubs.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contact & Payment Options</h2>
+      <p>Email: <a href="mailto:akshatvash@gmail.com">akshatvash@gmail.com</a></p>
+      <p>Phone: <a href="tel:6897770976">689‑777‑0976</a></p>
+      <p>Accepted methods: bank transfer, Cash App, Zelle, or request another method.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p id="year">&copy; <span id="year-text"></span> FirstImpression AI. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('year-text').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
